@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy – WiFi Monitor</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 860px; margin: 0 auto; padding: 28px 22px 64px; line-height: 1.55; color: #1b1f23; background: #fafafa; }
+    h1,h2,h3 { line-height: 1.25; color:#111; }
+    h1 { margin-top: 0; }
+    code { background:#f1f3f5; padding:2px 5px; border-radius:4px; font-size:90%; }
+    a { color:#0b57d0; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    ul { margin:0 0 1em 1.2em; }
+    .meta { font-size: 0.95em; color:#444; margin: 4px 0 28px; }
+    .badge { display:inline-block; background:#e0ecff; padding:4px 10px; border-radius:16px; font-size:12px; margin:0 0 12px; letter-spacing:.5px; font-weight:600; color:#174ea6; }
+    .callout { background:#fff8e1; border-left:4px solid #f5b400; padding:12px 16px; border-radius:4px; margin:16px 0; }
+    hr { border:0; border-top:1px solid #e2e6ea; margin:32px 0; }
+    footer { margin-top:48px; font-size:0.85em; color:#555; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy – WiFi Monitor</h1>
+  <p class="meta">Effective Date: April 16, 2026 &nbsp;|&nbsp; Last Updated: April 16, 2026</p>
+
+  <h2>1. Introduction</h2>
+  <p>WiFi Monitor ("we", "our", or "the app") respects your privacy. This policy explains what information the Android app accesses, how it is used, and the limited circumstances under which information may be shared. The app is designed to function entirely on your device. Scan results, network information, and your settings are processed locally and are not transmitted to any server controlled by us.</p>
+
+  <h2>2. Summary at a Glance</h2>
+  <ul>
+    <li>No account, login, or personal identity collected.</li>
+    <li>WiFi scan results (SSID, BSSID, signal strength, channel, security type) are processed on-device only.</li>
+    <li>Location permission is requested <strong>solely</strong> because Android requires it to perform WiFi scans &mdash; the app does not read, store, or transmit your GPS coordinates.</li>
+    <li>Ads are provided by Google AdMob (banner and interstitial), which may use the Advertising ID.</li>
+    <li>Firebase Analytics and Crashlytics collect anonymized usage and crash data to improve stability and inform feature decisions (release builds only).</li>
+    <li>Uninstalling the app removes all locally stored preferences.</li>
+  </ul>
+
+  <h2>3. Information the App Processes (Device-Local)</h2>
+  <p><strong>Read locally for display and analysis only:</strong></p>
+  <ul>
+    <li>Information about WiFi networks visible to your device: SSID (network name), BSSID (access point MAC address), signal strength (RSSI in dBm), frequency (MHz), channel number, channel width, frequency band (2.4 GHz / 5 GHz / 6 GHz), and security type (WPA/WPA2/WPA3/Open).</li>
+    <li>Information about your currently connected network, if any: SSID, link speed, IP configuration available through standard Android WiFi APIs.</li>
+    <li>Approximate distance to access points, computed locally from signal strength using the Free-Space Path Loss formula.</li>
+    <li>Vendor / manufacturer name derived from the BSSID prefix using a bundled, offline OUI (Organizationally Unique Identifier) lookup table. No network request is made for this lookup.</li>
+    <li>App preferences (such as theme mode) stored in Jetpack DataStore.</li>
+  </ul>
+  <p>This information never leaves your device. It is not transmitted to any server controlled by us.</p>
+
+  <h2>4. What We Do <em>Not</em> Collect</h2>
+  <ul>
+    <li>No name, email, address, phone, contacts, calendar, photos, media, files, or messages.</li>
+    <li>No GPS coordinates or precise/coarse location data &mdash; even though the location permission is granted (see Section 5).</li>
+    <li>No saved WiFi passwords or credentials.</li>
+    <li>No browsing history or traffic from networks you connect to.</li>
+    <li>No biometric, health, or other sensitive personal data.</li>
+    <li>No persistent server-side scan history or logs.</li>
+  </ul>
+
+  <h2>5. Why Location Permission Is Required</h2>
+  <div class="callout">
+    <p>Starting with Android 6.0 (Marshmallow), Google requires apps that scan for nearby WiFi networks to hold the <code>ACCESS_FINE_LOCATION</code> (or <code>ACCESS_COARSE_LOCATION</code>) permission. This is because the list of nearby WiFi access points can be used to infer location.</p>
+    <p>WiFi Monitor requests this permission <strong>only</strong> to enable WiFi scanning. The app:</p>
+    <ul>
+      <li>Does <strong>not</strong> request, read, or store your GPS coordinates.</li>
+      <li>Does <strong>not</strong> use the Fused Location Provider, GPS, or any other location API.</li>
+      <li>Does <strong>not</strong> derive, infer, or transmit your location to any server.</li>
+    </ul>
+    <p>If you deny this permission, Android will return empty WiFi scan results and the app's core scanning features will not function.</p>
+  </div>
+
+  <h2>6. How Information Is Used Locally</h2>
+  <ul>
+    <li>To display the list of nearby WiFi networks with signal strength, channel, and security details.</li>
+    <li>To render channel-usage and signal-strength visualizations across the 2.4 GHz, 5 GHz, and 6 GHz bands.</li>
+    <li>To show details about your currently connected network.</li>
+    <li>To compute and display estimated distance, signal quality bars, and vendor information.</li>
+  </ul>
+  <p>We do <strong>not</strong> sell, rent, or otherwise share any user data.</p>
+
+  <h2>7. Local Storage &amp; Retention</h2>
+  <ul>
+    <li>App preferences (such as theme selection) are stored in Jetpack DataStore on your device.</li>
+    <li>Ad frequency counters used by the interstitial ad manager are stored locally.</li>
+    <li>Scan results are held in memory while the app is running and are not written to a persistent database.</li>
+    <li>All locally stored data is removed when you uninstall the app or clear the app's data through Android system settings.</li>
+  </ul>
+
+  <h2>8. Advertising (Google AdMob)</h2>
+  <p>The app integrates Google Mobile Ads (AdMob) to display banner ads and occasional interstitial ads. AdMob may collect:</p>
+  <ul>
+    <li>Advertising ID (resettable), IP address, device information, coarse location inferred from IP, and performance metrics for ad delivery and fraud prevention.</li>
+  </ul>
+  <p>Refer to Google's policies for full details: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. You may opt out of personalized ads or reset your Advertising ID via Android system settings, or visit <a href="https://adssettings.google.com" target="_blank" rel="noopener">https://adssettings.google.com</a>.</p>
+  <p><strong>EEA / UK / Switzerland Users:</strong> Where required, Google's ad SDK applies the User Messaging Platform (UMP) consent flow for personalized advertising under GDPR and the IAB Transparency and Consent Framework (TCF v2.2). You may accept personalized ads, decline and receive non-personalized ads, or manage individual vendor preferences. Your choices are stored locally and can be changed at any time through Android system settings.</p>
+
+  <h2>9. Firebase Analytics &amp; Crashlytics (Google)</h2>
+  <p>The app integrates Firebase Analytics and Firebase Crashlytics to improve app stability and user experience. These services may collect:</p>
+  <ul>
+    <li>Anonymous app usage data (screen views, feature usage, session duration, ad interaction events).</li>
+    <li>Crash reports and technical diagnostics (stack traces, device state at time of crash, non-fatal exceptions).</li>
+    <li>Device information (model, OS version, app version, language settings).</li>
+    <li>General geographic region inferred from IP address (not precise GPS location).</li>
+  </ul>
+  <p>This data is used solely to:</p>
+  <ul>
+    <li>Identify and fix bugs, crashes, and performance issues.</li>
+    <li>Understand how users interact with the app to improve features.</li>
+    <li>Monitor app stability and overall user experience.</li>
+  </ul>
+  <p><strong>No personally identifiable information</strong> (name, email, phone number, or contacts) is collected. All data is anonymized and aggregated. Analytics and Crashlytics collection is <strong>disabled in debug / development builds</strong>; only release builds report to Firebase. Refer to Google's policies for full details: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+  <h2>10. Permissions Used</h2>
+  <ul>
+    <li><code>ACCESS_WIFI_STATE</code>: Required to read information about WiFi networks and the current connection.</li>
+    <li><code>CHANGE_WIFI_STATE</code>: Required to initiate a WiFi scan refresh.</li>
+    <li><code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>: Required by Android 6.0+ to perform WiFi scans. The app does not access your actual location. See Section 5.</li>
+    <li><code>ACCESS_NETWORK_STATE</code>: Required to detect connectivity status and network changes.</li>
+    <li><code>INTERNET</code>: Required for AdMob to load advertisements and for Firebase to transmit anonymized analytics and crash reports.</li>
+    <li><code>com.google.android.gms.permission.AD_ID</code>: Enables AdMob's access to the Advertising ID. You can opt out via Android system settings.</li>
+  </ul>
+
+  <h2>11. Security</h2>
+  <ul>
+    <li>All data remains within Android's standard app sandbox.</li>
+    <li>The app makes no remote requests except to Google's AdMob servers for ad delivery and to Firebase for anonymized analytics and crash reporting.</li>
+    <li>Because no personal data leaves the device, no additional encryption layer is applied to local preferences.</li>
+  </ul>
+
+  <h2>12. User Controls</h2>
+  <ul>
+    <li>Revoke the location permission at any time through Android system settings (note: WiFi scanning will then return no results).</li>
+    <li>Reset your Advertising ID or limit ad personalization in Android system settings.</li>
+    <li>Clear the app's stored preferences via Android system settings (Apps &rarr; WiFi Monitor &rarr; Storage &rarr; Clear data).</li>
+    <li>Uninstall the app to remove all remaining local data.</li>
+  </ul>
+
+  <h2>13. Children's Privacy</h2>
+  <p>The app is not directed to children under 13. We do not knowingly collect personal data from children. The app does not require any personal data to function.</p>
+
+  <h2>14. International &amp; Legal Disclosures</h2>
+  <ul>
+    <li>No "sale" or "sharing" of personal information as defined under US state privacy laws (CCPA/CPRA, etc.).</li>
+    <li>We do not transfer personal data across borders. Any data processed by Google AdMob is handled by Google in compliance with applicable data-protection laws and its own privacy policy.</li>
+  </ul>
+
+  <h2>15. Third Parties</h2>
+  <ul>
+    <li><strong>Google AdMob</strong> &ndash; Advertising delivery and measurement (see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>).</li>
+    <li><strong>Google User Messaging Platform (UMP)</strong> &ndash; Consent collection for GDPR/TCF compliance, where applicable (see <a href="https://support.google.com/admob/answer/10113005" target="_blank" rel="noopener">UMP SDK Documentation</a>).</li>
+    <li><strong>Firebase Analytics</strong> &ndash; Anonymous app usage analytics to improve user experience (see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a>).</li>
+    <li><strong>Firebase Crashlytics</strong> &ndash; Crash reporting and diagnostics to improve app stability (see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a>).</li>
+    <li>No other third-party SDKs (social, tracking, or advertising networks beyond Google) are integrated.</li>
+  </ul>
+
+  <h2>16. Changes to This Policy</h2>
+  <p>We may update this policy to reflect feature changes or legal requirements. The "Last Updated" date will change upon revision. Material changes affecting user rights will be highlighted in release notes where practical.</p>
+
+  <h2>17. Contact</h2>
+  <p>Questions or requests: <strong>tofa.du@gmail.com</strong></p>
+
+  <p>This Privacy Policy is hosted on GitHub Pages. For their data collection details, see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a> and <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection" target="_blank" rel="noopener">GitHub Pages Data Collection</a>.</p>
+
+  <hr />
+  <footer>
+    <p>WiFi Monitor &ndash; Privacy Policy. This document is provided for transparency and does not create contractual obligations beyond applicable law.</p>
+  </footer>
+</body>
+</html>
