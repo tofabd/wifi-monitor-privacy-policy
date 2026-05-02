@@ -21,7 +21,7 @@
 </head>
 <body>
   <h1>Privacy Policy – WiFi Monitor</h1>
-  <p class="meta">Effective Date: April 16, 2026 &nbsp;|&nbsp; Last Updated: April 16, 2026</p>
+  <p class="meta">Effective Date: April 16, 2026 &nbsp;|&nbsp; Last Updated: May 2, 2026</p>
 
   <h2>1. Introduction</h2>
   <p>WiFi Monitor ("we", "our", or "the app") respects your privacy. This policy explains what information the Android app accesses, how it is used, and the limited circumstances under which information may be shared. The app is designed to function entirely on your device. Scan results, network information, and your settings are processed locally and are not transmitted to any server controlled by us.</p>
@@ -31,7 +31,7 @@
     <li>No account, login, or personal identity collected.</li>
     <li>WiFi scan results (SSID, BSSID, signal strength, channel, security type) are processed on-device only.</li>
     <li>Location permission is requested <strong>solely</strong> because Android requires it to perform WiFi scans &mdash; the app does not read, store, or transmit your GPS coordinates.</li>
-    <li>Ads are provided by Google AdMob (banner and interstitial), which may use the Advertising ID.</li>
+    <li>Ads are provided by Google AdMob (banner, interstitial, and app-open), which may use the Advertising ID.</li>
     <li>Firebase Analytics and Crashlytics collect anonymized usage and crash data to improve stability and inform feature decisions (release builds only).</li>
     <li>Uninstalling the app removes all locally stored preferences.</li>
   </ul>
@@ -80,14 +80,14 @@
 
   <h2>7. Local Storage &amp; Retention</h2>
   <ul>
-    <li>App preferences (such as theme selection) are stored in Jetpack DataStore on your device.</li>
-    <li>Ad frequency counters used by the interstitial ad manager are stored locally.</li>
+    <li>App preferences (such as theme selection and a first-launch onboarding flag) are stored in Jetpack DataStore on your device.</li>
+    <li>Shared ad-frequency counters (cooldown, daily cap, last-backgrounded timestamp for app-open) used by the interstitial and app-open managers are stored locally in SharedPreferences.</li>
     <li>Scan results are held in memory while the app is running and are not written to a persistent database.</li>
     <li>All locally stored data is removed when you uninstall the app or clear the app's data through Android system settings.</li>
   </ul>
 
   <h2>8. Advertising (Google AdMob)</h2>
-  <p>The app integrates Google Mobile Ads (AdMob) to display banner ads and occasional interstitial ads. AdMob may collect:</p>
+  <p>The app integrates Google Mobile Ads (AdMob) to display banner ads, occasional interstitial ads, and an app-open ad shown on cold start and when returning to the app after a session gap. AdMob may collect:</p>
   <ul>
     <li>Advertising ID (resettable), IP address, device information, coarse location inferred from IP, and performance metrics for ad delivery and fraud prevention.</li>
   </ul>
